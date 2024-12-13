@@ -2,8 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Work Day Scheduler</title>
-
+  <title>Day Scheduler</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -13,67 +12,177 @@
 
 <body>
   <header>
-    <h1 class="display-1 d-flex justify-content-center">Work Day Sheduler</h1>
+    <h1 class="display-1 d-flex justify-content-center">Day Sheduler</h1>
   </header>
   <div class="container">
+    <div id="date" class="d-flex align-items-center justify-content-center m-2 fs-3"></div>
     <div class="row time-line">
-      <div class="col-2 d-flex align-items-center justify-content-center border-bottom-0 rounded-top-start time time-8">8 AM</div>
-      <textarea class="col-8 border-end-0 border-bottom-0 border-start-0 border-2 border-black" rows="2"></textarea>
-      <button class="col-2 border-bottom-0 button-8">&#128190; SAVE</button>
+      <div time="0" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time time-0">12 AM
+      </div>
+      <textarea time="0" id="time-0" class="col-8 border-end-0 border-bottom-0 border-start-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-0')" class="col-2 border-bottom-0 button-0">&#128190; SAVE</button>
     </div>
 
     <div class="row time-line">
-      <div class="col-2 d-flex align-items-center justify-content-center border-bottom-0 rounded-top-start time">9 AM</div>
-      <textarea class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black" rows="2"></textarea>
-      <button class="col-2 border-bottom-0">&#128190; SAVE</button>
+      <div time="1" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">1 AM</div>
+      <textarea time="1" id="time-1" class="col-8 border-end-0 border-bottom-0 border-start-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-1')" class="col-2 border-bottom-0">&#128190; SAVE</button>
     </div>
 
     <div class="row time-line">
-      <div class="col-2 d-flex align-items-center justify-content-center border-bottom-0 rounded-top-start time">10 AM</div>
-      <textarea class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black" rows="2"></textarea>
-      <button class="col-2 border-bottom-0">&#128190; SAVE</button>
+      <div time="2" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">2 AM</div>
+      <textarea time="2" id="time-2" class="col-8 border-end-0 border-bottom-0 border-start-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-2')" class="col-2 border-bottom-0">&#128190; SAVE</button>
     </div>
 
     <div class="row time-line">
-      <div class="col-2 d-flex align-items-center justify-content-center border-bottom-0 rounded-top-start time">11 AM</div>
-      <textarea class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black" rows="2"></textarea>
-      <button class="col-2 border-bottom-0">&#128190; SAVE</button>
+      <div time="3" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">3 AM</div>
+      <textarea time="3" id="time-3" class="col-8 border-end-0 border-bottom-0 border-start-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-3')" class="col-2 border-bottom-0">&#128190; SAVE</button>
     </div>
 
     <div class="row time-line">
-      <div class="col-2 d-flex align-items-center justify-content-center border-bottom-0 rounded-top-start time">12 PM</div>
-      <textarea class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black" rows="2"></textarea>
-      <button class="col-2 border-bottom-0">&#128190; SAVE</button>
+      <div time="4" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">4 AM</div>
+      <textarea time="4" id="time-4" class="col-8 border-end-0 border-bottom-0 border-start-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-4')" class="col-2 border-bottom-0">&#128190; SAVE</button>
     </div>
-    
+
     <div class="row time-line">
-      <div class="col-2 d-flex align-items-center justify-content-center border-bottom-0 rounded-top-start time">1 PM</div>
-      <textarea class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black" rows="2"></textarea>
-      <button class="col-2 border-bottom-0">&#128190; SAVE</button>
+      <div time="5" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">5 AM</div>
+      <textarea time="5" id="time-5" class="col-8 border-end-0 border-bottom-0 border-start-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-5')" class="col-2 border-bottom-0">&#128190; SAVE</button>
     </div>
-    
+
     <div class="row time-line">
-      <div class="col-2 d-flex align-items-center justify-content-center border-bottom-0 rounded-top-start time">2 PM</div>
-      <textarea class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black" rows="2"></textarea>
-      <button class="col-2 border-bottom-0">&#128190; SAVE</button>
+      <div time="6" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">6 AM</div>
+      <textarea time="6" id="time-6" class="col-8 border-end-0 border-bottom-0 border-start-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-6')" class="col-2 border-bottom-0">&#128190; SAVE</button>
     </div>
-    
+
     <div class="row time-line">
-      <div class="col-2 d-flex align-items-center justify-content-center border-bottom-0 rounded-top-start time">3 PM</div>
-      <textarea class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black" rows="2"></textarea>
-      <button class="col-2 border-bottom-0">&#128190; SAVE</button>
+      <div time="7" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">7 AM</div>
+      <textarea time="7" id="time-7" class="col-8 border-end-0 border-bottom-0 border-start-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-7')" class="col-2 border-bottom-0">&#128190; SAVE</button>
     </div>
-    
+
     <div class="row time-line">
-      <div class="col-2 d-flex align-items-center justify-content-center border-bottom-0 rounded-top-start time">4 PM</div>
-      <textarea class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black" rows="2"></textarea>
-      <button class="col-2 border-bottom-0">&#128190; SAVE</button>
+      <div time="8" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">8 AM</div>
+      <textarea time="8" id="time-8" class="col-8 border-end-0 border-bottom-0 border-start-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-8')" class="col-2 border-bottom-0">&#128190; SAVE</button>
     </div>
-    
+
     <div class="row time-line">
-      <div class="col-2 d-flex align-items-center justify-content-center rounded-top-start time time-5">5 PM</div>
-      <textarea class="col-8 border-end-0 border-start-0 border-2 border-black" rows="2"></textarea>
-      <button class="col-2 button-5">&#128190; SAVE</button>
+      <div time="9" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">9 AM</div>
+      <textarea time="9" id="time-9" class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-9')" class="col-2 border-bottom-0">&#128190; SAVE</button>
+    </div>
+
+    <div class="row time-line">
+      <div time="10" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">10 AM</div>
+      <textarea time="10" id="time-10" class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-10')" class="col-2 border-bottom-0">&#128190; SAVE</button>
+    </div>
+
+    <div class="row time-line">
+      <div time="11" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">11 AM</div>
+      <textarea time="11" id="time-11" class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-11')" class="col-2 border-bottom-0">&#128190; SAVE</button>
+    </div>
+
+    <div class="row time-line">
+      <div time="12" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">12 PM</div>
+      <textarea time="12" id="time-12" class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-12')" class="col-2 border-bottom-0">&#128190; SAVE</button>
+    </div>
+
+    <div class="row time-line">
+      <div time="13" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">1 PM</div>
+      <textarea time="13" id="time-13" class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-13')" class="col-2 border-bottom-0">&#128190; SAVE</button>
+    </div>
+
+    <div class="row time-line">
+      <div time="14" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">2 PM</div>
+      <textarea time="14" id="time-14" class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-14')" class="col-2 border-bottom-0">&#128190; SAVE</button>
+    </div>
+
+    <div class="row time-line">
+      <div time="15" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">3 PM</div>
+      <textarea time="15" id="time-15" class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-15')" class="col-2 border-bottom-0">&#128190; SAVE</button>
+    </div>
+
+    <div class="row time-line">
+      <div time="16" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">4 PM</div>
+      <textarea time="16" id="time-16" class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-16')" class="col-2 border-bottom-0">&#128190; SAVE</button>
+    </div>
+
+    <div class="row time-line">
+      <div time="17" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">5 PM</div>
+      <textarea time="17" id="time-17" class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-17')" class="col-2  border-bottom-0">&#128190; SAVE</button>
+    </div>
+
+    <div class="row time-line">
+      <div time="18" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">6 PM</div>
+      <textarea time="18" id="time-18" class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-18')" class="col-2  border-bottom-0">&#128190; SAVE</button>
+    </div>
+
+    <div class="row time-line">
+      <div time="19" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">7 PM</div>
+      <textarea time="19" id="time-19" class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-19')" class="col-2  border-bottom-0">&#128190; SAVE</button>
+    </div>
+
+    <div class="row time-line">
+      <div time="20" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">8 PM</div>
+      <textarea time="20" id="time-20" class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-20')" class="col-2  border-bottom-0">&#128190; SAVE</button>
+    </div>
+
+    <div class="row time-line">
+      <div time="21" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">9 PM</div>
+      <textarea time="21" id="time-21" class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-21')" class="col-2  border-bottom-0">&#128190; SAVE</button>
+    </div>
+
+    <div class="row time-line">
+      <div time="22" class="col-2 d-flex align-items-center justify-content-center border-bottom-0 time">10 PM</div>
+      <textarea time="22" id="time-22" class="col-8 border-end-0 border-start-0 border-bottom-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-22')" class="col-2  border-bottom-0">&#128190; SAVE</button>
+    </div>
+
+    <div class="row time-line">
+      <div time="23" class="col-2 d-flex align-items-center justify-content-center time time-23">11 PM</div>
+      <textarea time="23" id="time-23" class="col-8 border-end-0 border-start-0 border-2 border-black"
+        rows="2"></textarea>
+      <button onclick="saveText('time-23')" class="col-2 button-23">&#128190; SAVE</button>
     </div>
   </div>
 
@@ -84,6 +193,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
 
 </body>
 
